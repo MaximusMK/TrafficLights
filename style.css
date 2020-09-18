@@ -5,44 +5,43 @@ body {
     background-color: #bbb
 }
 .container {
-    width: 250px;
-    height: 750px;
-    background-color: black;
-    position: absolute;
-    margin: 0 auto;    
+    width: 200px;
+    background-color: #000;
+    margin: 0 auto;
+    padding: 25px;    
 }
-.green-circle,
-.yellow-circle,
-.red-circle {
+.circle {
     width: 200px;
     height: 200px;
-    border-radius: 100px;
-    position: relative;
-    margin: 0 auto;
+    border-radius: 100px;    
+    margin: auto;
+    margin-top: 25px;
 }
-.green-circle { 
-    margin-top: 50px;  
+.circle:first-child {
+    margin-top: 0;
+}
+
+.circle.green { 
     background-color: rgb(0, 30, 0); 
     animation-name: GreenColorTrigger;
     animation-duration: 5s; 
     transition-timing-function: ease;
 }
-.yellow-circle {     
-    margin-top: 25px;
+.circle.yellow {     
     background-color: rgb(30, 30, 0);  
     animation-name: YellowColorTrigger;
     animation-duration: 3s;
     animation-delay: 5s; 
     transition-timing-function: ease;   
 }
-.red-circle {    
+.circle.red {    
     background-color: rgb(30, 0, 0);   
-    margin-top: 25px; 
     animation-name: RedColorTrigger;
     animation-duration: 10s;
     animation-delay: 8s; 
     transition-timing-function: ease;
 }
+
 @keyframes GreenColorTrigger {
     from {
         background-color: rgb(0, 30, 0);
